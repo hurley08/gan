@@ -1,0 +1,27 @@
+[project]
+name = "gan"
+version = "0.1.0"
+description = "Generative Adversarial Network"
+authors = [
+    {name = "hurley08", email = "intriqet@gmail.com"},
+]
+dependencies = [
+    "torch>=2.3.0",
+    "matplotlib>=3.8.4",
+    "pytest>=8.1.1",
+    "pre-commit>=3.7.0",
+    "black>=24.4.1",
+    "pylint>=3.1.0",
+    "torchvision>=0.18.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pdm]
+distribution = true

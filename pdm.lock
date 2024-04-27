@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:1e013188c5f191261f2e8f992b467f5c86b536ab55ec56af6f3812153412f153"
+content_hash = "sha256:0a33ec718f5c53053a874d8553288aa4b9c641d240e58c2f587562d3afe4f6d5"
 
 [[package]]
 name = "astroid"
@@ -753,6 +753,15 @@ files = [
     {file = "PyYAML-6.0.1-cp312-cp312-win32.whl", hash = "sha256:d483d2cdf104e7c9fa60c544d92981f12ad66a457afae824d146093b8c294c54"},
     {file = "PyYAML-6.0.1-cp312-cp312-win_amd64.whl", hash = "sha256:0d3304d8c0adc42be59c5f8a4d9e3d7379e6955ad754aa9d6ab7a398b59dd1df"},
     {file = "PyYAML-6.0.1.tar.gz", hash = "sha256:bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"},
+]
+
+[[package]]
+name = "readline"
+version = "6.2.4.1"
+summary = "The standard Python readline extension statically linked against the GNU readline library."
+groups = ["default"]
+files = [
+    {file = "readline-6.2.4.1.tar.gz", hash = "sha256:e00f86e03dfe52e7d1502cec5c64070b32621c85509c0081a4cfa6a0294bd107"},
 ]
 
 [[package]]

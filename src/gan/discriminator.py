@@ -3,10 +3,6 @@
 import torch
 from torch import nn
 
-import math
-import matplotlib.pyplot as plt
-
-
 
 class Discriminator(nn.Module):
     def __init__(self):
@@ -28,3 +24,5 @@ class Discriminator(nn.Module):
         output = self.model(x)
         return output
 
+
+discriminator = Discriminator()

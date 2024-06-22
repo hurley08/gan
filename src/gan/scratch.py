@@ -49,16 +49,17 @@ for epoch in range(num_epochs):
 		# Training the discriminator
 		discriminator.zero_grad()
 		output_discriminator = discriminator(all_samples)
-		loss_discriminator = loss_function(output_discriminator.backward())
+		loss_discriminator = loss_function(output_discriminator, all_samples_labels)
+		loss_discriminator.backward()
 		optimizer_discriminator.step()
 
 
 		# Data for training the generator
-		latent_space_samples = torch_randn((batch_size, 2))
+		latent_space_samples = torch.randn((batch_size, 2))
 
 
 		# Training the generator
-		generator = zero_grad()
+		generator.zero_grad()
 		generated_samples = generator(latent_space_samples)
 		output_discriminator_generated = discriminator(generated_samples)
 		loss_generator = loss_function(output_discriminator_generated, real_samples_labels)
@@ -72,7 +73,7 @@ for epoch in range(num_epochs):
 			print(f"Epoch: {epoch} Loss G.: {loss_generator}")
 
 latent_space_samples = torch.randn(100,2)
-generated_samples = gemerator(latent_space_samples)
+generated_samples = generator(latent_space_samples)
 
 generated_samples = generated_samples.detach()
 plt.plot(generated_samples[:, 0], generated_samples[:,1], ".")
